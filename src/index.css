@@ -83,4 +83,40 @@ textarea {
   .animate-fade-up { animation: fadeUp .72s cubic-bezier(.2,.9,.2,1) both; }
   @keyframes floatSlow { 0%{ transform:translateY(0);}50%{transform:translateY(-6px);}100%{transform:translateY(0);} }
   .animate-float { animation: floatSlow 6s ease-in-out infinite; }
+
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  .animate-typewriter {
+    animation: typewriter 3.5s steps(60, end) forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid rgba(14, 165, 164, 0.8);
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+  }
+  .animate-gradient-text {
+    background: linear-gradient(90deg, #0ea5a4, #0369a1, #0ea5a4, #0369a1);
+    background-size: 300% 100%;
+    animation: gradientShift 4s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @keyframes underlineGradient {
+    0% { background-position: -100% center; }
+    100% { background-position: 100% center; }
+  }
+  .animate-underline-gradient {
+    position: relative;
+    padding-bottom: 8px;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-1)) 0 100% / 200% 2px no-repeat;
+    animation: underlineGradient 3s ease-in-out infinite;
+  }
 }

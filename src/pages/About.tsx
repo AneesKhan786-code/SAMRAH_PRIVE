@@ -58,6 +58,49 @@ export default function About(){
             <p className="mt-4 text-slate-300">We provide accurate market analysis, investment trends, and property intelligence to help clients make informed decisions.</p>
           </div>
         </section>
+
+        <section className="mt-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-16 text-center">
+              <p className="text-sm uppercase tracking-[0.35em] text-teal-400 font-semibold">Our Agents</p>
+              <h2 className="mt-4 text-4xl font-bold text-white">Lahore and Dubai Property Experts</h2>
+              <p className="mt-4 max-w-2xl mx-auto text-slate-400">Two dedicated teams serving Lahore and Dubai with local market knowledge, premium service, and trusted property guidance.</p>
+            </div>
+            <div className="grid gap-8 lg:grid-cols-2">
+              {[
+                {
+                  img: '/images/person_1-min.jpg',
+                  city: 'Lahore',
+                  title: 'Lahore Office',
+                  subtitle: 'DHA & Gulberg luxury properties',
+                },
+                {
+                  img: '/images/person_2-min.jpg',
+                  city: 'Dubai',
+                  title: 'Dubai Office',
+                  subtitle: 'Premium Dubai investment homes',
+                }
+              ].map((agent, index) => (
+                <div key={index} className="rounded-[32px] border border-white/10 bg-white/5 p-8 shadow-soft">
+                  <div className="mb-6 flex items-center gap-4">
+                    <div className="h-16 w-16 overflow-hidden rounded-full border border-white/10 bg-slate-900">
+                      <img src={agent.img} alt={`${agent.city} team avatar`} className="h-full w-full object-cover" />
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.35em] text-teal-300">{agent.city}</p>
+                      <h3 className="mt-2 text-2xl font-semibold text-white">{agent.title}</h3>
+                    </div>
+                  </div>
+                  <p className="text-slate-300">{agent.subtitle}</p>
+                  <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-400">
+                    <span className="rounded-full border border-slate-700 px-3 py-2">Local market expertise</span>
+                    <span className="rounded-full border border-slate-700 px-3 py-2">Premium client service</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

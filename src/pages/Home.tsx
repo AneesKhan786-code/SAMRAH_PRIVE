@@ -37,7 +37,7 @@ export default function Home(){
               <p className="text-sm uppercase tracking-[0.35em] text-teal-600 font-semibold">Featured Listings</p>
                 <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950">Exclusive Property Opportunities in Lahore & Dubai</h2>
             </div>
-            <Link to="/properties" className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-8 py-3 text-sm font-semibold text-white hover:shadow-lg transition">View all properties</Link>
+            <Link to="/properties" className="inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-semibold text-white hover:shadow-lg transition btn-gradient">View all properties</Link>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">
@@ -45,6 +45,7 @@ export default function Home(){
               <article key={property.id} className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-md transition hover:shadow-2xl hover:-translate-y-1">
                 <div className="relative h-72 overflow-hidden bg-slate-100">
                   <img src={property.image} alt={property.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+                  <div className="absolute right-3 top-3 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold text-teal-600 backdrop-blur-sm">{property.city}</div>
                 </div>
                 <div className="p-6">
                   <div className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-teal-600">{property.price}</div>
@@ -54,7 +55,14 @@ export default function Home(){
                     <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm">🛏️ {property.beds} beds</span>
                     <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm">🛁 {property.baths} baths</span>
                   </div>
-                  <Link to={`/property/${property.id}`} className="inline-flex items-center rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-6 py-3 text-sm font-semibold text-white transition hover:shadow-lg">See details</Link>
+                  <div className="mb-6 flex items-center gap-3 rounded-lg bg-slate-100 p-3">
+                    <img src={property.agentAvatar} alt={property.agent} className="h-9 w-9 rounded-full object-cover border border-slate-300" />
+                    <div className="flex-1">
+                      <p className="text-xs text-slate-500">Agent</p>
+                      <p className="text-sm font-semibold text-slate-950">{property.agent}</p>
+                    </div>
+                  </div>
+                  <Link to={`/property/${property.id}`} className="inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white transition hover:shadow-lg btn-gradient">See details</Link>
                 </div>
               </article>
             ))}
@@ -199,7 +207,7 @@ export default function Home(){
           <p className="text-sm uppercase tracking-[0.35em] text-teal-600 font-semibold">Join Our Team</p>
           <h2 className="mt-4 text-4xl font-bold text-slate-950 mb-6">Be a part of our growing real estate agents</h2>
           <p className="max-w-2xl mx-auto text-slate-600 mb-10 text-lg">Become part of a thriving community of real estate professionals dedicated to luxury property expertise.</p>
-          <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-10 py-4 text-sm font-semibold text-white hover:shadow-xl transition">
+          <a href="/contact" className="inline-flex items-center justify-center rounded-full px-10 py-4 text-sm font-semibold text-white hover:shadow-xl transition btn-gradient">
             Apply for Real Estate Agent
           </a>
         </div>
@@ -213,18 +221,18 @@ export default function Home(){
             <h2 className="mt-4 text-4xl font-bold text-slate-950">Our Agents</h2>
             <p className="mt-6 max-w-2xl mx-auto text-slate-600">Experienced professionals committed to finding you the perfect property with personalized service.</p>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2">
             {[
-              {name: 'Lahore', image: '/images/person_1-min.jpg', title: 'Lahore Specialist', desc: 'Local Lahore expertise for premium residential and investment opportunities.'},
-              {name: 'Dubai', image: '/images/person_2-min.jpg', title: 'Dubai Specialist', desc: 'Dubai luxury market guidance for high-end homes and commercial projects.'},
-              {name: 'Bridge', image: '/images/person_3-min.jpg', title: 'Lahore & Dubai Advisor', desc: 'Connecting both markets with seamless strategy and property matching.'}
+              {name: 'Asim Khan', title: 'Lahore Office Head', city: 'Lahore', desc: 'Specialized in DHA and Gulberg luxury properties with 8+ years of expertise.', img: '/images/person_1-min.jpg'},
+              {name: 'Ahmed Al Mansouri', title: 'Dubai Office Head', city: 'Dubai', desc: 'Premium Dubai properties specialist with deep market insights and client focus.', img: '/images/person_3-min.jpg'}
             ].map((agent, i) => (
-              <div key={i} className="text-center">
-                <div className="mb-6 h-32 w-32 mx-auto overflow-hidden rounded-full shadow-lg ring-1 ring-white/10">
-                  <img src={agent.image} alt={`${agent.name} avatar`} className="h-full w-full object-cover" />
+              <div key={i} className="rounded-[32px] border border-slate-200 bg-slate-50 shadow-md p-8 text-center">
+                <div className="mb-6 h-40 w-40 mx-auto overflow-hidden rounded-full border-4 border-teal-200 bg-slate-200 shadow-lg">
+                  <img src={agent.img} alt={agent.name} className="h-full w-full object-cover" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-950">{agent.name}</h3>
-                <p className="text-sm text-teal-600 font-semibold mt-2">{agent.title}</p>
+                <p className="text-xs uppercase tracking-[0.35em] text-teal-600 font-semibold">{agent.city} Team</p>
+                <h3 className="text-2xl font-bold text-slate-950 mt-2">{agent.name}</h3>
+                <p className="text-sm text-teal-600 font-semibold mt-1">{agent.title}</p>
                 <p className="text-sm text-slate-600 mt-4 leading-relaxed">{agent.desc}</p>
                 <div className="mt-6 flex gap-3 justify-center">
                   <a href="#" className="text-teal-600 hover:text-teal-700">f</a>
