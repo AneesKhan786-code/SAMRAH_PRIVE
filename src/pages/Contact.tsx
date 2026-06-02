@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
 
-const BUSINESS_EMAIL = 'mother@business.com'; // Replace with your mother's real business email later
-const WHATSAPP_LINK = 'https://wa.me/923255511022?text=Hello%20SAMRA%20PRIVE%2C%20I%20would%20like%20to%20connect%20about%20a%20property.';
+const BUSINESS_EMAIL = 'hello@samrahprive.com';
+const WHATSAPP_LINK = 'https://wa.me/923235511022?text=Hello%20SAMRAH%20PRIVE%2C%20I%20would%20like%20to%20connect%20about%20a%20property.';
 
 export default function Contact(){
   const [name, setName] = useState('');
@@ -27,7 +27,7 @@ export default function Contact(){
             <div className="mt-12 grid gap-4 sm:grid-cols-2">
               <div className="rounded-[28px] border border-white/10 bg-white/5 p-6">
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Office</p>
-                <p className="mt-3 text-slate-300">45 Gotham Ave, London</p>
+                <p className="mt-3 text-slate-300">DHA Lahore & Dubai (by appointment)</p>
               </div>
               <div className="rounded-[28px] border border-white/10 bg-white/5 p-6">
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Email</p>
@@ -36,7 +36,7 @@ export default function Contact(){
               </div>
               <div className="rounded-[28px] border border-white/10 bg-white/5 p-6">
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Phone</p>
-                <p className="mt-3 text-slate-300">+44 20 7946 0958</p>
+                <p className="mt-3 text-slate-300">03235511022</p>
               </div>
               <div className="rounded-[28px] border border-white/10 bg-white/5 p-6">
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Support</p>
@@ -80,7 +80,7 @@ export default function Contact(){
                   className="mt-3 w-full rounded-3xl border border-white/10 bg-slate-950 px-4 py-4 text-white placeholder:text-slate-500 focus:border-white/30 focus:outline-none"
                 />
               </div>
-              <button type="submit" className="inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-4 text-sm font-semibold text-slate-950 transition hover:bg-slate-200">
+              <button type="submit" className="inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-sm font-semibold text-white btn-gradient">
                 Send message
               </button>
             </form>
@@ -92,7 +92,7 @@ export default function Contact(){
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-400"
               >
-                Message on WhatsApp: +92 325 551 1022
+                Chat on WhatsApp: 03235511022
               </a>
               <p className="text-sm text-slate-400">When you click <strong>Send message</strong>, your email app will open with the message pre-filled for {BUSINESS_EMAIL}.</p>
               <p className="text-sm text-slate-400">Use the WhatsApp button for fast real-time chat with the same number.</p>

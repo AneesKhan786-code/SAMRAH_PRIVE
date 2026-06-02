@@ -18,13 +18,13 @@ export default function Home(){
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
         <div className="relative mx-auto flex min-h-[75vh] max-w-7xl items-center px-4 py-24 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-white">
-            <p className="mb-4 text-sm uppercase tracking-[0.35em] text-teal-300">Luxury Properties</p>
-            <h1 className="mb-6 text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">Easiest way to find your dream home</h1>
-            <p className="mb-10 max-w-2xl text-lg text-slate-100 sm:text-xl leading-relaxed">Discover the finest curated properties with exceptional search tools, market insights, and white-glove service.</p>
-            <form className="flex flex-col gap-3 sm:flex-row">
-              <input placeholder="Your ZIP code or City. e.g. New York" className="min-w-0 flex-1 rounded-full border-0 bg-white/90 px-6 py-4 text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500" />
-              <button className="rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition">Search</button>
-            </form>
+            <p className="mb-4 text-sm uppercase tracking-[0.35em] text-teal-300 opacity-0 animate-fade-up" style={{ animationDelay:'0.10s' }}>Premium Real Estate</p>
+            <h1 className="mb-6 text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl opacity-0 animate-fade-up" style={{ animationDelay:'0.22s' }}>Premium Real Estate in Lahore & Dubai</h1>
+            <p className="mb-10 max-w-2xl text-lg text-slate-100 sm:text-xl leading-relaxed opacity-0 animate-fade-up" style={{ animationDelay:'0.34s' }}>At SAMRAH PRIVE, we specialize in connecting buyers and investors with exceptional residential and commercial properties across DHA Lahore, Gulberg Lahore, and Dubai's most prestigious communities. Whether you're searching for a luxury family home, a high-return investment, or a commercial opportunity, our experienced advisors ensure a smooth, transparent, and rewarding property journey. We believe real estate is more than buying and selling—it's about building a future with confidence.</p>
+            <div className="flex gap-3 opacity-0 animate-fade-up" style={{ animationDelay:'0.46s' }}>
+              <a href="/properties" className="inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold text-white shadow-lg btn-gradient">Explore Properties</a>
+              <a href="https://wa.me/923235511022?text=Hello%20SAMRAH%20PRIVE%2C%20I%20would%20like%20to%20connect%20about%20a%20property." target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/3 px-8 py-4 text-sm font-semibold text-white hover:shadow-lg transition">Contact on WhatsApp</a>
+            </div>
           </div>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function Home(){
           <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.35em] text-teal-600 font-semibold">Featured Listings</p>
-              <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950">Popular Properties</h2>
+                <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950">Exclusive Property Opportunities in Lahore & Dubai</h2>
             </div>
             <Link to="/properties" className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-8 py-3 text-sm font-semibold text-white hover:shadow-lg transition">View all properties</Link>
           </div>
@@ -174,20 +174,20 @@ export default function Home(){
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 text-center md:grid-cols-4">
             <div>
-              <p className="text-5xl font-bold">3,298</p>
-              <p className="mt-3 text-teal-100">Total Properties</p>
+              <p className="text-5xl font-bold">3,500+</p>
+                <p className="mt-3 text-teal-100">Premium Properties</p>
             </div>
             <div>
-              <p className="text-5xl font-bold">2,181</p>
-              <p className="mt-3 text-teal-100">Sold Properties</p>
+              <p className="text-5xl font-bold">2,400+</p>
+                <p className="mt-3 text-teal-100">Successful Transactions</p>
             </div>
             <div>
-              <p className="text-5xl font-bold">9,316</p>
-              <p className="mt-3 text-teal-100">Happy Clients</p>
+              <p className="text-5xl font-bold">10,000+</p>
+                <p className="mt-3 text-teal-100">Satisfied Clients</p>
             </div>
             <div>
-              <p className="text-5xl font-bold">7,191</p>
-              <p className="mt-3 text-teal-100">Agents</p>
+              <p className="text-5xl font-bold">7,500+</p>
+                <p className="mt-3 text-teal-100">Professional Network</p>
             </div>
           </div>
         </div>
@@ -215,12 +215,14 @@ export default function Home(){
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              {name: 'James Doe', title: 'Senior Agent', desc: 'Expert in luxury residential properties and investment portfolios.'},
-              {name: 'Jean Smith', title: 'Property Consultant', desc: 'Specializing in premium estates and architectural masterpieces.'},
-              {name: 'Alicia Brown', title: 'Market Advisor', desc: 'Provides comprehensive market insights and valuation expertise.'}
+              {name: 'Lahore', image: '/images/person_1-min.jpg', title: 'Lahore Specialist', desc: 'Local Lahore expertise for premium residential and investment opportunities.'},
+              {name: 'Dubai', image: '/images/person_2-min.jpg', title: 'Dubai Specialist', desc: 'Dubai luxury market guidance for high-end homes and commercial projects.'},
+              {name: 'Bridge', image: '/images/person_3-min.jpg', title: 'Lahore & Dubai Advisor', desc: 'Connecting both markets with seamless strategy and property matching.'}
             ].map((agent, i) => (
               <div key={i} className="text-center">
-                <div className="mb-6 h-32 w-32 mx-auto rounded-full bg-gradient-to-br from-teal-400 to-teal-600 shadow-lg"></div>
+                <div className="mb-6 h-32 w-32 mx-auto overflow-hidden rounded-full shadow-lg ring-1 ring-white/10">
+                  <img src={agent.image} alt={`${agent.name} avatar`} className="h-full w-full object-cover" />
+                </div>
                 <h3 className="text-xl font-bold text-slate-950">{agent.name}</h3>
                 <p className="text-sm text-teal-600 font-semibold mt-2">{agent.title}</p>
                 <p className="text-sm text-slate-600 mt-4 leading-relaxed">{agent.desc}</p>

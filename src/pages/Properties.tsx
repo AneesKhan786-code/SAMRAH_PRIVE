@@ -8,8 +8,8 @@ export default function Properties(){
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Property collection</p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Explore curated luxury homes</h1>
-            <p className="mt-6 text-lg leading-8 text-slate-300">A refined portfolio of investment-ready residences with exceptional architecture, design, and location.</p>
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Premium Properties Across Lahore & Dubai</h1>
+            <p className="mt-6 text-lg leading-8 text-slate-300">Explore luxury homes, villas, apartments, commercial buildings, and investment opportunities located in the region's most sought-after communities.</p>
           </div>
         </div>
       </section>

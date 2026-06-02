@@ -4,8 +4,8 @@ export default function Services(){
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.35em] text-slate-400">What we offer</p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Luxury property services designed for your lifestyle.</h1>
-          <p className="mt-6 text-lg leading-8 text-slate-300">From property sourcing to closing and aftercare, we provide a complete concierge experience for high-end buyers and investors.</p>
+          <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Comprehensive Real Estate Solutions</h1>
+          <p className="mt-6 text-lg leading-8 text-slate-300">From property sourcing and market analysis to negotiations and after-sales support, we provide a complete real estate experience tailored to your needs.</p>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -25,20 +25,22 @@ export default function Services(){
 
         <div className="mt-16 grid gap-6 lg:grid-cols-2">
           <div className="rounded-[32px] border border-white/10 bg-black/60 p-8">
-            <h3 className="text-xl font-semibold text-white">How it works</h3>
+            <h3 className="text-xl font-semibold text-white">How It Works</h3>
             <ol className="mt-6 space-y-4 text-slate-300">
-              <li><strong>1.</strong> Tell us your property vision.</li>
-              <li><strong>2.</strong> We curate a tailored selection.</li>
-              <li><strong>3.</strong> View privately and choose confidently.</li>
-              <li><strong>4.</strong> Close with premium legal and financial support.</li>
+              <li><strong>1.</strong> Tell Us Your Requirements</li>
+              <li><strong>2.</strong> Receive Curated Property Options</li>
+              <li><strong>3.</strong> Schedule Property Visits</li>
+              <li><strong>4.</strong> Compare Opportunities</li>
+              <li><strong>5.</strong> Complete Documentation</li>
+              <li><strong>6.</strong> Finalize Your Transaction With Confidence</li>
             </ol>
           </div>
           <div className="rounded-[32px] border border-white/10 bg-black/60 p-8">
-            <h3 className="text-xl font-semibold text-white">Why choose SAMRA PRIVE</h3>
+            <h3 className="text-xl font-semibold text-white">Why Choose SAMRAH PRIVE</h3>
             <ul className="mt-6 space-y-4 text-slate-300">
-              <li>Curated luxury properties not listed publicly.</li>
-              <li>24/7 client concierge and personalized market updates.</li>
-              <li>White-glove service from search through settlement.</li>
+              <li>Access to Exclusive Properties</li>
+              <li>Personalized Consultation and 24/7 Client Concierge</li>
+              <li>Professional Transaction Support and Market Expertise</li>
             </ul>
           </div>
         </div>

@@ -9,21 +9,19 @@ const navLinks = [
   { label: 'Contact', to: '/contact' },
 ];
 
-const WHATSAPP_URL = 'https://wa.me/923255511022?text=Hello%20SAMRA%20PRIVE%2C%20I%20would%20like%20to%20connect%20about%20a%20property.';
+const WHATSAPP_URL = 'https://wa.me/923235511022?text=Hello%20SAMRAH%20PRIVE%2C%20I%20would%20like%20to%20connect%20about%20a%20property.';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-teal-200/20 bg-white/95 backdrop-blur-xl shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 text-white font-bold text-sm shadow-md">
-            SP
-          </div>
+          <img src="/images/logo.svg" alt="SAMRAH PRIVE" className="h-9 w-9 rounded-lg shadow-sm" />
           <div className="flex flex-col">
-            <span className="text-sm font-bold tracking-tight text-slate-900">SAMRAH PRIVE</span>
-            <span className="text-xs text-teal-600 font-semibold">Luxury Homes</span>
+            <span className="text-sm font-semibold tracking-tight text-slate-900">SAMRAH PRIVE</span>
+            <span className="text-xs text-slate-500">Luxury Homes</span>
           </div>
         </div>
 
@@ -34,8 +32,8 @@ export default function Navbar() {
               to={link.to}
               className={({ isActive }) =>
                 isActive
-                  ? 'text-teal-600 border-b-2 border-teal-600 pb-1'
-                  : 'transition hover:text-teal-600'
+                  ? 'text-slate-900 border-b-2 border-transparent pb-1 nav-gradient-underline'
+                  : 'transition text-slate-700 hover:text-slate-900 nav-gradient-underline'
               }
             >
               {link.label}
@@ -49,7 +47,7 @@ export default function Navbar() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:shadow-lg"
+              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white btn-gradient"
             >
               WhatsApp
             </a>

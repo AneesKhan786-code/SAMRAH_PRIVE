@@ -2,23 +2,43 @@ export default function About(){
   return (
     <main className="bg-slate-950 py-20 text-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+          <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
             <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Our vision</p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Built for visionary buyers and modern living.</h1>
-            <p className="mt-6 text-lg leading-8 text-slate-300">SAMRA PRIVE brings together elite properties, modern market insights, and a discreet service model for clients seeking the finest homes in the world.</p>
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Connecting People with Exceptional Real Estate Opportunities</h1>
+            <p className="mt-6 text-lg leading-8 text-slate-300">SAMRAH PRIVE was founded with a commitment to providing clients with access to premium properties, expert guidance, and a seamless real estate experience. We combine local market expertise with international standards to help clients make confident property decisions in Lahore and Dubai.</p>
           </div>
-          <div className="space-y-4 rounded-[32px] border border-white/10 bg-white/5 p-8 shadow-soft">
-            <div>
-              <h2 className="text-xl font-semibold text-white">Our mission</h2>
-              <p className="mt-3 text-slate-300">To redefine luxury property discovery with immersive experiences, authentic advice, and absolute trust.</p>
+          <div className="mx-auto w-full max-w-xl space-y-6 rounded-[32px] border border-white/10 bg-white/5 p-8 shadow-soft lg:mx-0">
+            <div className="overflow-hidden rounded-[28px] border border-white/10 bg-slate-900" style={{ aspectRatio: '4 / 5' }}>
+              <img src="/images/SAMRAHimg.png" alt="Samrah Prive Co-founder" className="h-full w-full object-cover object-center" />
+            </div>
+            <div className="text-center lg:text-left">
+              <p className="text-sm uppercase tracking-[0.35em] text-teal-400">Co-founder</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">Samrah</h2>
+              <p className="mt-4 text-slate-300 leading-8">Samrah is the visionary co-founder of SAMRAH PRIVE, combining deep luxury real estate knowledge with a sharp eye for premium opportunities in Lahore and Dubai. Her leadership ensures every client receives thoughtful guidance, tailored property matching, and a seamless journey from first viewing to closing.</p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-3xl bg-slate-950/70 p-5">
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Experience</p>
+                <p className="mt-2 font-semibold text-white">12+ years in luxury real estate</p>
+              </div>
+              <div className="rounded-3xl bg-slate-950/70 p-5">
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Focus</p>
+                <p className="mt-2 font-semibold text-white">Lahore & Dubai premiere properties</p>
+              </div>
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-white">Our values</h2>
+              <h2 className="text-xl font-semibold text-white">Our mission</h2>
+              <p className="mt-3 text-slate-300">To redefine the real estate experience through professionalism, transparency, innovation, and exceptional client service.</p>
+            </div>
+            <div>
+              <h2 className="text-xl font-semibold text-white">Our core values</h2>
               <ul className="mt-3 space-y-2 text-slate-300">
-                <li>Authenticity in every listing</li>
-                <li>Personalized concierge service</li>
-                <li>Design-forward real estate strategy</li>
+                <li>Integrity & Transparency</li>
+                <li>Client-First Approach</li>
+                <li>Professional Excellence</li>
+                <li>Market Expertise</li>
+                <li>Long-Term Relationships</li>
               </ul>
             </div>
           </div>
@@ -26,16 +46,16 @@ export default function About(){
 
         <section className="mt-20 grid gap-8 lg:grid-cols-3">
           <div className="rounded-[32px] border border-white/10 bg-white/5 p-8">
-            <h3 className="text-lg font-semibold text-white">Curated selection</h3>
-            <p className="mt-4 text-slate-300">Only the most refined homes enter our portfolio after rigorous quality review.</p>
+            <h3 className="text-lg font-semibold text-white">Curated Property Selection</h3>
+            <p className="mt-4 text-slate-300">Every property undergoes careful evaluation to ensure quality, location value, investment potential, and long-term growth prospects.</p>
           </div>
           <div className="rounded-[32px] border border-white/10 bg-white/5 p-8">
-            <h3 className="text-lg font-semibold text-white">White glove access</h3>
-            <p className="mt-4 text-slate-300">Private viewings, document handling, and premium negotiation support included.</p>
+            <h3 className="text-lg font-semibold text-white">Premium Client Support</h3>
+            <p className="mt-4 text-slate-300">From your first inquiry to the final transaction, our team remains committed to delivering personalized assistance every step of the way.</p>
           </div>
           <div className="rounded-[32px] border border-white/10 bg-white/5 p-8">
-            <h3 className="text-lg font-semibold text-white">Market insight</h3>
-            <p className="mt-4 text-slate-300">Detailed property intelligence and performance outlooks for every listing we present.</p>
+            <h3 className="text-lg font-semibold text-white">Market Insights</h3>
+            <p className="mt-4 text-slate-300">We provide accurate market analysis, investment trends, and property intelligence to help clients make informed decisions.</p>
           </div>
         </section>
       </div>
